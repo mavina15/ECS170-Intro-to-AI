@@ -53,16 +53,54 @@ The H1 file in this repository represents the first homework assignment, where t
 Include clear instructions on how to run the code, specifying any dependencies or setup steps necessary.
 
 ## Homework 2: Constructing an Image Classifier using a CNN
+Homework 2 - Fashion MNIST Image Classification
 
-The H2 file represents the second homework assignment, where the goal is to construct an image classifier using a Convolutional Neural Network (CNN). This assignment likely involves tasks such as dataset preparation, model architecture design, training, and evaluation.
+## Overview
+This repository contains the implementation of a Convolutional Neural Network (CNN) using TensorFlow and Keras for classifying images in the Fashion MNIST dataset. The goal is to create a robust model capable of distinguishing between different fashion items.
 
-### File Structure
-- **`/src`:** This directory contains the source code for constructing the image classifier using a CNN.
-- **`/data`:** Any datasets or data-related files required for the homework assignment.
-- **`/docs`:** Documentation related to the CNN model design, training process, and evaluation.
+## Part 1: Analyzing the Data
+### Libraries
+- TensorFlow and Keras for deep learning
+- Matplotlib for visualizing images
+- NumPy for array manipulation
+- Scikit-learn for confusion matrix visualization
 
-### How to Run
-Provide clear instructions on how to run the image classifier code, specifying any dependencies or setup steps.
+### Loading and Splitting Data
+The Fashion MNIST dataset is loaded and split into training and testing sets. The dataset consists of 70,000 images, with 60,000 used for training and 10,000 for testing. There are 10 categories, including T-shirt/top, Trouser, Pullover, Dress, Coat, Sandal, Shirt, Sneaker, Bag, and Ankle boot.
+
+## Part 2: Training the Model
+### CNN Architecture
+The CNN is built with:
+- 2 Convolutional layers
+- 2 Max Pooling layers
+- 2 Fully Connected layers
+- Softmax layer with 10 nodes for the 10 categories
+
+### Compiling the Model
+The model is compiled with the Adam optimizer, sparse categorical crossentropy loss, and sparse categorical accuracy metric. The model summary is displayed.
+
+### Training the Model
+The model is trained for 10 epochs using the Fashion MNIST training data.
+
+### Saving the Model
+The trained model is saved to a file named 'model.h5'.
+
+### Plotting Training and Loss Functions
+Accuracy and loss functions are plotted against epochs to visualize model performance during training.
+
+## Part 3: Prediction
+### Evaluating on Test Data
+The model is evaluated on the test data, and the test accuracy is printed.
+
+### Confusion Matrix
+A confusion matrix is generated and displayed to assess the model's performance across different categories.
+
+### Visualizing Random Predictions
+Random predictions made by the model on a subset of test images are visualized, showing predicted labels, true labels, and the correctness of predictions.
+
+## Part 4: Conclusion
+The project demonstrates the creation, training, and evaluation of a CNN model for the Fashion MNIST dataset. It showcases the use of TensorFlow and Keras for deep learning tasks, provides insights into model performance through visualizations, and highlights areas where the model may encounter challenges. Overall, it serves as a practical example of image classification using deep learning techniques.
+
 
 ## Final Project: Enhancing Network Anomaly Detection
 
